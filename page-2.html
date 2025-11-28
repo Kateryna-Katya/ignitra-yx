@@ -5,29 +5,53 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Page 2</title>
-    <link rel="stylesheet" crossorigin href="/test/assets/styles-X9THPhCB.css">
+    <link rel="stylesheet" crossorigin href="/ignitra-yx/assets/styles-CYizMtiS.css">
   </head>
   <body>
     <header class="header">
-  <div class="container">
-    <nav class="nav">
-      <a class="nav-logo" href="./index.html" aria-label="Site logo">
-        <svg class="nav-logo-icon" width="100" height="30">
-          <use href="{=$icon-path}"></use>
-        </svg>
-      </a>
-      <ul class="nav-list">
-        <li class="nav-item">
-          <a class="nav-link {=$highlight-act}" href="./page-2.html">Page 2</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link {=$highlight-curr}" href="./page-3.html">Page 3</a>
-        </li>
-      </ul>
-    </nav>
+  <div class="header__top">
+    <div class="container header__top-container">
+      <div class="header__info">
+        <span class="header__info-item">
+          <i data-lucide="map-pin"></i> 28 Eastcastle St, London W1W 8DH, UK
+        </span>
+        <span class="header__info-item">
+          <i data-lucide="mail"></i> neural@ignitra-yx.click
+        </span>
+      </div>
+      <div class="header__notice">
+        <i data-lucide="globe"></i> Предложение активно только в странах ЕС
+      </div>
+      <div class="header__socials">
+        <a href="https://www.instagram.com" class="header__social-link" aria-label="Instagram"><i data-lucide="instagram"></i></a>
+        <a href="https://www.twitter.com" class="header__social-link" aria-label="Twitter"><i data-lucide="twitter"></i></a>
+        <a href="https://www.linkedin.com" class="header__social-link" aria-label="Linkedin"><i data-lucide="linkedin"></i></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="header__main">
+    <div class="container header__main-container">
+      <a href="#" class="logo">Ignitra-YX</a>
+
+      <button class="header__burger" aria-label="Menu">
+        <i data-lucide="menu"></i>
+      </button>
+
+      <nav class="nav">
+        <ul class="nav__list">
+          <li class="nav__item"><a href="#" class="nav__link">Главная</a></li>
+          <li class="nav__item"><a href="#services" class="nav__link">Чат-боты</a></li>
+          <li class="nav__item"><a href="#ai-solutions" class="nav__link">AI-Решения</a></li>
+          <li class="nav__item"><a href="#integration" class="nav__link">Интеграция</a></li>
+          <li class="nav__item"><a href="#blog" class="nav__link">Блог</a></li>
+          <li class="nav__item"><a href="#cases" class="nav__link">Кейсы</a></li>
+          <li class="nav__item"><a href="#contact" class="nav__link nav__link--cta">Связаться</a></li>
+        </ul>
+      </nav>
+    </div>
   </div>
 </header>
-
 
     <main>
       <div class="container">
@@ -39,19 +63,61 @@
 
     <footer class="footer">
   <div class="container">
-    <p class="footer-desc">
-      Made with ✨ by
-      <a
-        class="footer-link"
-        href="https://goit.global/ua/"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        GoIT team
-      </a>
-    </p>
+    <div class="footer__grid">
+      <div class="footer__col">
+        <a href="#" class="logo footer__logo">Ignitra-YX</a>
+        <p class="footer__desc">
+          Технология нового поколения для автоматизации вашего общения. Мы создаем ботов, которые расширяют горизонты
+          проекта.
+        </p>
+        <div class="footer__contacts">
+          <p class="footer__contact-item">
+            <i data-lucide="phone"></i> +44 20 3925 8491
+          </p>
+          <p class="footer__contact-item">
+            <i data-lucide="map-pin"></i> 28 Eastcastle St, London W1W 8DH
+          </p>
+          <p class="footer__contact-item">
+            <i data-lucide="mail"></i> neural@ignitra-yx.click
+          </p>
+        </div>
+        <div class="footer__socials">
+          <a href="#" class="footer__social-link"><i data-lucide="instagram"></i></a>
+          <a href="#" class="footer__social-link"><i data-lucide="facebook"></i></a>
+          <a href="#" class="footer__social-link"><i data-lucide="youtube"></i></a>
+        </div>
+      </div>
+
+      <div class="footer__col">
+        <h3 class="footer__title">Навигация</h3>
+        <ul class="footer__nav">
+          <li><a href="#" class="footer__link">Главная</a></li>
+          <li><a href="#services" class="footer__link">Чат-боты для бизнеса</a></li>
+          <li><a href="#ai-solutions" class="footer__link">AI-Решения</a></li>
+          <li><a href="#integration" class="footer__link">Интеграция CRM</a></li>
+          <li><a href="#blog" class="footer__link">Блог о технологиях</a></li>
+          <li><a href="#cases" class="footer__link">Успешные кейсы</a></li>
+          <li><a href="#contact" class="footer__link">Связаться с нами</a></li>
+        </ul>
+      </div>
+
+      <div class="footer__col">
+        <h3 class="footer__title">Информация</h3>
+        <ul class="footer__nav">
+          <li><a href="privacy.html" class="footer__link">Политика конфиденциальности</a></li>
+          <li><a href="cookies.html" class="footer__link">Политика Cookies</a></li>
+          <li><a href="terms.html" class="footer__link">Условия использования</a></li>
+          <li><a href="return.html" class="footer__link">Политика возврата</a></li>
+          <li><a href="disclaimer.html" class="footer__link">Отказ от ответственности</a></li>
+          <li><a href="personal-data-policy.html" class="footer__link">Обработка персональных данных</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer__bottom">
+      <p>&copy; 2024 Ignitra-YX. Платформа уже доступна в Европе. Все права защищены.</p>
+    </div>
   </div>
 </footer>
-
   </body>
 </html>
