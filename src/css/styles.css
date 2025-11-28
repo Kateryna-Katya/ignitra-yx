@@ -1910,3 +1910,26 @@ h6 {
     padding-top: 100px;
   }
 }
+.footer__contact-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--color-text-muted);
+  font-size: 0.9rem;
+  /* Добавляем курсор и плавность */
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+/* Эффект при наведении */
+.footer__contact-item:hover {
+  color: var(--color-primary);
+  /* Фиолетовый цвет при наведении */
+  transform: translateX(5px);
+  /* Легкий сдвиг вправо */
+}
+
+.footer__contact-item:hover i {
+  color: var(--color-accent);
+  /* Иконка становится голубой */
+}
