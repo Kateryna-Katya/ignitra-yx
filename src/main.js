@@ -125,3 +125,61 @@ if (canvas) {
         init();
     });
 }
+/* --- Contact Form Logic --- */
+const leadForm = document.getElementById('leadForm');
+const successMessage = document.getElementById('successMessage');
+
+if (leadForm) {
+    leadForm.addEventListener('submit', (e) => {
+        e.preventDefault(); // Зупиняємо перезавантаження
+
+        const btn = leadForm.querySelector('.form-btn');
+        const captchaInput = document.getElementById('captcha');
+        const originalText = btn.innerHTML;
+
+        // 1. Перевірка капчі (3 + 5 = 8)
+        if (captchaInput.value !== '8') {
+            alert('Ошибка капчи! Решите пример правильно (3 + 5).');
+            captchaInput.focus();
+            captchaInput.style.borderColor = 'red';
+            return;
+        }
+
+        // 2. Імітація відправки
+        btn.disabled = true;
+        btn.innerHTML = 'Отправка...';
+
+        setTimeout(() => {
+            // Успіх
+            leadForm.style.display = 'none'; // Ховаємо форму
+            successMessage.style.display = 'block'; // Показуємо повідомлення
+            
+            // Скидаємо форму на випадок перезавантаження
+            leadForm.reset();
+        }, 1500); // 1.5 секунди затримки
+    });
+    
+    // Скидання червоної рамки при вводі
+    document.getElementById('captcha').addEventListener('input', function() {
+        this.style.borderColor = 'var(--color-border)';
+    });
+}
+
+/* --- Cookie Pop-up Logic --- */
+const cookiePopup = document.getElementById('cookiePopup');
+const acceptCookie = document.getElementById('acceptCookie');
+
+if (cookiePopup && acceptCookie) {
+    // Перевіряємо, чи був вже клік
+    if (!localStorage.getItem('cookiesAccepted')) {
+        // Якщо ні — показуємо з затримкою
+        setTimeout(() => {
+            cookiePopup.classList.add('show');
+        }, 2000);
+    }
+
+    acceptCookie.addEventListener('click', () => {
+        localStorage.setItem('cookiesAccepted', 'true');
+        cookiePopup.classList.remove('show');
+    });
+}
